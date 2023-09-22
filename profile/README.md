@@ -46,9 +46,11 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
    Descrição: Modelagem do Banco de Dados Relacional (Modelo Entidade-Relacionamento e Modelo Relacional).
 
    - **MER:**
-     ![Modelo Entidade-Relacionamento](das)
+     
+     ![Modelo Entidade-Relacionamento](stardust-mer.png)
 
    - **Modelo Relacional:**
+     
      ![Modelo Relacional]()
 
 3. **Front-end** :art:
