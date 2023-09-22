@@ -5,17 +5,21 @@ Bem-vindo ao repositório da StardustOrg, uma organização dedicada a abrigar o
 ## Membros da Equipe :busts_in_silhouette:
 
 | Nome             | Matrícula | Email                  |
-|------------------|-----------|------------------------|
-| Ana Silva        | 123456    | ana.silva@email.com     |
-| Bruno Oliveira   | 789012    | bruno.oliveira@email.com|
-| Carlos Santos    | 345678    | carlos.santos@email.com |
-| Débora Souza     | 901234    | debora.souza@email.com  |
+|---------------------|-----------|------------------------|
+| JOAO VICTOR BARROSO ALVES        | 509697    | email      |
+| NICKOLAS GABRIEL LIMA RODRIGUES  | 509811    | email      |
+| VLADIA HELEN FERREIRA FARIAS     | 511730    | email      |
+| YANNA TORRES GONCALVES     | 507773    | torres.yanna03@gmail.com      |
 
 Juntos, buscamos aplicar os conceitos e técnicas aprendidas para criar soluções web funcionais e utilizáveis.
 
 ## StardustCard: A Magia do K-pop em Suas Mãos :computer:
 
-![logo]()
+<div align="center">
+   <img src="logo.svg" width="500">
+</div>
+
+<br>
 
 O principal produto da organização StardustOrg é o e-commerce StardustCard, uma plataforma de vendas de Photocards de K-pop da mais alta qualidade. O StardustCard é uma janela para os colecionadores de photocards e fãs de K-pop, permitindo que estes adquiram Photocards autênticos sem necessidade de comprar os álbuns.
 *A touch of Stardust*
@@ -25,7 +29,7 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
 - **Prototipação:** Figma e Draw.io
 - **Desenvolvimento Front-end:** HTML, CSS e JavaScript
 - **Desenvolvimento Back-end:** Java (JSP e Servlet)
-- **Banco de Dados:** PostgreSQL e SQLite
+- **Banco de Dados:** PostgreSQL
 
 ### Entregas 📅
 
