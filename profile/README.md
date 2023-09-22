@@ -13,7 +13,7 @@ Bem-vindo ao repositório da StardustOrg, uma organização dedicada a abrigar o
 
 Juntos, buscamos aplicar os conceitos e técnicas aprendidas para criar soluções web funcionais e utilizáveis.
 
-## StardustCard: A Magia do K-pop em Suas Mãos :computer:
+## StardustCard :computer:
 
 <div align="center">
    <img src="logo.svg" width="500">
