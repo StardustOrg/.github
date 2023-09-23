@@ -47,7 +47,7 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
 
    - **MER:**
      
-     ![Modelo Entidade-Relacionamento](stardust-mer.png)
+     ![Modelo Entidade-Relacionamento](stardust-mer02.png)
 
    - **Modelo Relacional:**
      
