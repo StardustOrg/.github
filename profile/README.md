@@ -7,7 +7,7 @@ Bem-vindo ao repositório da StardustOrg, uma organização dedicada a abrigar o
 | Nome             | Matrícula | Email                  |
 |---------------------|-----------|------------------------|
 | JOAO VICTOR BARROSO ALVES        | 509697    | joaovba2002@alu.ufc.br      |
-| NICKOLAS GABRIEL LIMA RODRIGUES  | 509811    | email      |
+| NICKOLAS GABRIEL LIMA RODRIGUES  | 509811    | nickolasgabriel@alu.ufc.br      |
 | VLADIA HELEN FERREIRA FARIAS     | 511730    | vladiahelenff@gmail.com     |
 | YANNA TORRES GONCALVES     | 507773    | torres.yanna03@gmail.com      |
 
