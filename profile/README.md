@@ -52,8 +52,12 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
    - **Modelo Relacional:**
      
      ![Modelo Relacional](stardust-mr.png)
+      
+   Para a instanciação do banco, segue os seguintes scripts:
+   * [Script de criação](https://github.com/StardustOrg/Database/blob/main/stardust-instancia.sql)
+   * Script de Povoação (**_in progress_**)
 
-3. **Front-end** :art:
+4. **Front-end** :art:
    
    Descrição: Primeira versão do front-end do e-commerce em HTML, CSS e JavaScript.
 
