@@ -54,7 +54,7 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
      ![Modelo Relacional](stardust-mr.png)
       
    Para a instanciação do banco, segue os seguinte script:
-   * [Script de criação](https://github.com/StardustOrg/Database/blob/main/stardust-instancia.sql)
+   * [Script de criação](https://github.com/StardustOrg/Database/blob/main/stardust_db_schema.sql)
 
 4. **Front-end** :art:
    
@@ -63,4 +63,26 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
    - [Repositório Front-end Cliente](https://github.com/StardustOrg/BasicHTML_Client)
    - [Repositório Front-end Admin](https://github.com/StardustOrg/BasicHTML_Admin)
 
-#### Entrega 02 (*in progress...*)
+#### Entrega 02 (23/10/2023)
+
+1. **Diagrama de Classes** :pick:
+   
+2. **Camada 'Model' (MVC)** :clipboard:
+
+3. **Funcionalidades**
+
+  - **Cadastrar Novo Cliente**:
+  - **Autenticar acesso (Login):**
+
+4. **Remodelagem do Banco de Dados** :floppy_disk:
+
+   Por fim, houve uma atualização no esquema de algumas tabelas, principalmente a tabela de *Categoria* (onde foi adicionado um novo campo, para guardar outra imagem).
+
+   O novo script de instanciação do banco pode ser encontrado no seguinte arquivo: [Script de criação](https://github.com/StardustOrg/Database/blob/main/stardust_db_schema.sql)
+
+   :exclamation: Recomendamos que o banco seja instanciado com o nome "stardust_db". Caso deseje usar outro nome, mude a referência na classe `Config`, no pacote `config` do código.
+
+   :exclamation: No novo script de criação já vem incluido um usuário *admin* com as seguintes credenciais de acesso:
+
+      - **login:** admin01
+      - **senha:** 123456
