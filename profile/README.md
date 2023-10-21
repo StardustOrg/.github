@@ -66,8 +66,14 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
 #### Entrega 02 (23/10/2023)
 
 1. **Diagrama de Classes** :pick:
+
+   Para guiar o desenvolvimento do sistema, criamos um pequeno diagrama de classes relacionado a camada Model.
+
+   ![Diagrama de Classes](stardust_card_class_diagram.png)
    
 2. **Camada 'Model' (MVC)** :clipboard:
+
+   Com base no diagrama de classes do item anterior, desenvolvemos toda a camada modelo que pode ser encontrada dentro do pacote `model` do [projeto](https://github.com/StardustOrg/StardustCard-Ecommerce/tree/main/src/java/model)
 
 3. **Funcionalidades**
 
@@ -86,3 +92,5 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
 
       - **login:** admin01
       - **senha:** 123456
+
+#### Entrega 03 (*in progress...*)
