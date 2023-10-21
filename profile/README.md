@@ -77,8 +77,8 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
 
 3. **Funcionalidades**
 
-  - **Cadastrar Novo Cliente**:
-  - **Autenticar acesso (Login):**
+     - **Cadastrar Novo Cliente**:
+     - **Autenticar acesso (Login):**
 
 4. **Remodelagem do Banco de Dados** :floppy_disk:
 
