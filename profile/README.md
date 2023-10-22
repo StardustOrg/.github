@@ -2,6 +2,8 @@
 
 Bem-vindo ao repositório da StardustOrg, uma organização dedicada a abrigar os trabalhos desenvolvidos para a disciplina "Programação para Web I" do curso de Sistemas e Mídias Digitais da Universidade Federal do Ceará (UFC). Este repositório contém os projetos e atividades desenvolvidos por alunos ao longo do curso.
 
+**Sumário de entregas: [Entrega 01 (29/09/2023)](https://github.com/StardustOrg/.github/edit/main/profile/README.md#entrega-01-29092023) • [Entrega 02 (23/10/2023)](https://github.com/StardustOrg/.github/edit/main/profile/README.md#entrega-02-23102023)  • [Entrega 03 (*in progress...*)]() • [Entrega Final (*to do*)]() •**
+
 ## Membros da Equipe :busts_in_silhouette:
 
 | Nome             | Matrícula | Email                  |
@@ -94,3 +96,5 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
       - **senha:** 123456
 
 #### Entrega 03 (*in progress...*)
+
+#### Entrega Final (*to do*)
