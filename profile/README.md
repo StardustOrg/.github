@@ -66,6 +66,7 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
    - [Repositório Front-end Admin](https://github.com/StardustOrg/BasicHTML_Admin)
 
 #### Entrega 02 (23/10/2023)
+- [Repositório Stardust Eccomerce](https://github.com/StardustOrg/StardustCard-Ecommerce.git)
 
 1. **Diagrama de Classes** :pick:
 
