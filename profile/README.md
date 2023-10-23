@@ -80,7 +80,106 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
 3. **Funcionalidades**
 
      - **Cadastrar Novo Cliente**:
+       
+          Para a realização dessa função partimos da criação de um formulário de cadastro que passa como `action` o caminho `/Register`:
+         ```jsp
+         <form method="POST" action="${pageContext.request.contextPath}/Register" onsubmit="return validateRegisterForm()">
+           <h2>Create account</h2>
+           <label>Your Name:</label>
+           <input type="text" name="name" id="name" placeholder="First and last name" required>
+           <label>Address:</label>
+           <input type="text" name="address" id="address" placeholder="Your address" required>
+           <label>Email:</label>
+           <input type="email" name="email" id="email" placeholder="Your email" required>
+           <label>Login:</label>
+           <input type="text" name="login" id="login" placeholder="At least 6 characters" required>
+           <label>Password:</label>
+           <input type="password" name="password" id="password" placeholder="At least 6 characters" required>
+           <label>Confirm Password:</label>
+           <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat your password"
+                  required>
+           <button>Register</button>
+         </form>
+         ```
+         Esta action aciona a `RegisterServlet` que em seu método POST recupera os dados de cadastro e utiliza o `UserDAO` para inserir os dados no banco, se o cadastro der certo ele redireciona para a Tela de Login, se não deu certo ele dá um aviso de erro e permanece na tela de Register:
+         ```java
+            protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+              String login = request.getParameter("login");
+              String email = request.getParameter("email");
+              boolean admin = Boolean.parseBoolean(request.getParameter("admin"));
+              String password = request.getParameter("password");
+              String address = request.getParameter("address");
+              String name = request.getParameter("name");
+            
+              User user = new User(login, password, email, admin, address, name);
+              UserDAO userDAO = new UserDAO();
+              boolean cadastrado = userDAO.insert(user);
+            
+              if (cadastrado) {
+                  response.sendRedirect("Login");
+              } else {
+                  String alertMessage = "Registration failed. Please try again.";
+                  String redirectScript = "<script>alert('" + alertMessage + "'); window.location.href = 'Register';</script>";
+                  response.getWriter().write(redirectScript);
+              }
+            }
+         ```
+
      - **Autenticar acesso (Login):**
+      
+         Para a realização dessa função partimos da criação de um formulário de login que passa como `action` o caminho `/Login`:
+         ```jsp
+          <form method="POST" action="${pageContext.request.contextPath}/Login" onsubmit="return validateLoginForm()">
+              <h2>Sign in</h2>
+              <label>Login:</label>
+              <input type="text" name="login" id="login" placeholder="Login" required>
+              <label>Password:</label>
+              <input type="password" name="password" id="password" placeholder="Password" required>
+              <a class="text_link">Forgot password?</a>
+              <button>Sign In</button>
+          </form>
+         ```
+         Este action aciona a `LoginServlet` que posui um método POST que recupera os dados de login e usa o `UserDAO` para verificar no banco se aqueles dados existem. Se existirem a Servlet cria variáveis de sessão para armazenar dados do usuário. Após isso, a servlet redireciona o usuário para a tela correspondente a seu tipo de usuário, caso ele seja administrador leva para a tela de `Admin`, caso contrário, para a tela de `Home`.
+       ```java
+          protected void doPost(HttpServletRequest request, HttpServletResponse response)
+               throws ServletException, IOException {
+           String login = request.getParameter("login");
+           String password = request.getParameter("password");
+         
+           UserDAO userDAO = new UserDAO();
+           boolean success = userDAO.validateAccess(login, password);
+           response.setContentType("text/html;charset=UTF-8");
+           if (success) {
+               User myUser = userDAO.getOne(login);    
+               /**
+                * Cria uma sessão de usuário com Login, Nome se o usuário é Admin
+                */
+               HttpSession session = request.getSession();
+               session.setAttribute("login", myUser.getLogin());
+               session.setAttribute("name", myUser.getName());
+               session.setAttribute("isAdmin", myUser.isAdmin());
+         
+               if (myUser.isAdmin()) {
+                   response.sendRedirect("Admin");
+               } else {
+                   response.sendRedirect("Home");
+               }
+           } else {
+               String alertMessage = "Login failed. Wrong Login/Password. Please try again.";
+               String redirectScript = "<script>alert('" + alertMessage + "');  window.location.href = 'Login';</script>";
+               response.getWriter().write(redirectScript);
+           }
+         }
+       ```
+         Por fim, protegemos as rotas das telas de Admin, uma vez que essas telas não podem ser acessadas a não ser que o usuário esteja autenticado como administrador, por meio de um Servlet que redireciona para a página, porém antes de redirecionar verifica a Sessão para ver se o usuário autenticado é um administrador:
+       ```java
+         @Override
+         protected void doGet(HttpServletRequest request, HttpServletResponse response)
+               throws ServletException, IOException {
+           RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/index.jsp");
+           dispatcher.forward(request, response);
+         }
+       ``` 
 
 4. **Remodelagem do Banco de Dados** :floppy_disk:
 
