@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório da StardustOrg, uma organização dedicada a abrigar os trabalhos desenvolvidos para a disciplina "Programação para Web I" do curso de Sistemas e Mídias Digitais da Universidade Federal do Ceará (UFC). Este repositório contém os projetos e atividades desenvolvidos por alunos ao longo do curso.
 
-**Sumário de entregas: [Entrega 01 (29/09/2023)](https://github.com/StardustOrg/.github/edit/main/profile/README.md#entrega-01-29092023) • [Entrega 02 (23/10/2023)](https://github.com/StardustOrg/.github/edit/main/profile/README.md#entrega-02-23102023)  • [Entrega 03 (*in progress...*)]() • [Entrega Final (*to do*)]() •**
+**Sumário de entregas: [Entrega 01 (29/09/2023)](https://github.com/StardustOrg/.github/edit/main/profile/README.md#entrega-01-29092023) • [Entrega 02 (23/10/2023)](https://github.com/StardustOrg/.github/edit/main/profile/README.md#entrega-02-23102023)  • [Entrega 03 (17/11/2023)](#entrega-03-17112023) • [Entrega Final (*to do*)]() •**
 
 ## Membros da Equipe :busts_in_silhouette:
 
@@ -195,6 +195,40 @@ O principal produto da organização StardustOrg é o e-commerce StardustCard, u
       - **login:** admin01
       - **senha:** 123456
 
-#### Entrega 03 (*in progress...*)
+#### Entrega 03 (17/11/2023)
+
+- [Repositório Stardust Eccomerce](https://github.com/StardustOrg/StardustCard-Ecommerce.git)
+
+A partir dessa entrega, o desenvolvimento do sistema fica focado na resolução de issues, que aqui representam os requisitos, bugs e melhoramentos do sistema. Ao todo, foram resolvidas 15 issues, divididas entre features do cliente, admin, melhorias e modificações no banco de dados.
+
+<details>
+  <summary><b>Melhorias</b></summary>
+
+   Só houve uma issue de melhoria que é: [Mapeamento de Erros para páginas específicas #32](https://github.com/StardustOrg/StardustCard-Ecommerce/issues/32) Essa issue consiste em enviar um feedback visual para o usuário do sistema e também esconder a stack de erros. 
+   
+   Foram mapeados os principais HTTP status que representam erro: 404 (Page Not Found), 403 (Forbidden), 500 (Internal Server Error) e 503 (Service Unavailable). Cada um possui seu servlet adquado e página, com indicações do que fazer.
+
+   ```xml
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/403</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/500</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/503</location>
+    </error-page>
+   ```
+  
+</details>
+
+
 
 #### Entrega Final (*to do*)
